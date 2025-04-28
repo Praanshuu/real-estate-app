@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Provider from "./Provider";
 import {ClerkProvider} from '@clerk/nextjs'
+import { Toaster } from "@/components/ui/sonner";
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Provider>
+          <Toaster />
             {children}
           </Provider>
         </body>
